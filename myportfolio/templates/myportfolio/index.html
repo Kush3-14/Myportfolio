@@ -26,7 +26,7 @@
 
 body
 {
- background-color: #fffff;
+ background-color: #CF9FFF;
 }
 h4 {
   margin-bottom: 30px;
@@ -47,9 +47,9 @@ text-align: center
 }
 
 .contact {
-  background-color: white;
+  background-color: rgb(111, 255, 236);
   width: 550px;
-  border: 5px solid white;
+  border: 5px solid rgb(58, 107, 212);
   padding: 50px;
   margin: 20px;
   width: 50%;
@@ -63,8 +63,8 @@ width:120px;
 }
 
 .avatar {
-    background-color: #66ffff;
-    border: 5px solid  #66ffff;
+    background-color: #ffffff;
+    border: 5px solid  #fffeea;
 }
 
 
@@ -155,6 +155,10 @@ width:120px;
   border: 2px solid #0563bb;
 }
 
+ul {
+    text-align: center;
+    list-style-position: inside;
+  }
 
 
 
@@ -162,18 +166,15 @@ width:120px;
 <div class ="profile">
 <div class="profile-info">
 
-    <h3 class ="name">Hey I'm {{profile.name}}</h3>
-    <h6 class="card-subtitle mb-2 text-muted">{{ profile.designation}}</h6>
-    <p >{{profile.summary}}</p>
+    <h3 class ="name">Hey I'm Shivam. Nice to meet You!{{profile.name}}</h3>
+    <h6 class="card-subtitle mb-2 text-muted">Student | 2-star Codechef | Developer{{ profile.designation}}</h6>
+    <p >I build programs and I love what I do.<br>I value simple program structure, clean design patterns, and thoughtful interactions.<br>I like to code things from scratch, and enjoy bringing ideas to life.{{profile.summary}}</p>
 
     <div class="icon-bar">
-      <a href={{profile.fb_link}} class="facebook"><i class="fa fa-facebook"></i></a>
-        <a href={{profile.insta_link}} class="instagran"><i class="fa fa-instagram"></i></a>
-        <a href={{profile.github_link}} class="instagran"><i class="fa fa-github"></i></a>
-      <a href={{profile.linkedin_link}} class="linkedin"><i class="fa fa-linkedin"></i></a>
-        <a href=mailto:{{profile.email}} class="gmail"><i class="fa fa-envelope"></i></a>
-        <br>
-        <i class="fa fa-phone" aria-hidden="true">: {{profile.phone_number}}</i>
+      <a href="https://www.instagram.com/kush3.14/" class="instagran"><i class="fa fa-instagram"></i></a>
+      <a href="https://github.com/Kush3-14" class="instagran"><i class="fa fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/kush3-14/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+      <a href=mailto:ks987078@gmail.com class="gmail"><i class="fa fa-envelope"></i></a>
 
     </div>
     </section>
@@ -193,79 +194,19 @@ width:120px;
 
 
 <h4 id="project-header">My Projects</h4>
-
-<div class="card-group">
-
-  {% for project in projects %}
-  <div class="row">
-  <div class="col-sm-6">
-    <div class="card" style="width: 25rem;">
-        {% static "" as baseUrl %}
-      <img class="card-img-top" src="{{ baseUrl }}img/{{project.image_path}}">
-      <div class="card-body">
-        <h5 class="card-title">{{project.title}}</h5>
-        <p class="card-text">{{project.description}}</p>
-        <a href={{project.github_link}} class="btn btn-primary" target="_blank">View code</a>
-      </div>
-    </div>
-  </div>
+<div style="text-align:center">
+  <p><b>1. My own Portfolio</b></p>
+  <p><b>2. Some games using Python</b></p>
 </div>
-  {% endfor %}
 </div >
 <hr>
 
-<h4 id="skill-header" >My Skills</h4>
-
-<div class="div-border">
-
-    <div class="skills">
-    {% for skill in skills %}
-    <div class="skill">
-        <img id="skill-image" title={{skill.name}}  src={{skill.image}} alt={{skill.name}} class="skill-data">
-    </div>
-    {% endfor %}
-
+<h4 id="skill-header" >Languages I speak:</h4>
+<div style="text-align:center">
+  <p><b>Python, C, C++</b></p>
 </div>
+                  
 </div>
-
-<h3 align="center" class="resume-title">Professional Experience</h3>
-
-<section id="resume" class="resume">
- <div class="col-lg-6">
-            {% for exp in experiences %}
-            <div class="resume-item">
-              <h4>{{exp.designation}}</h4>
-                  {% if exp.is_present %}
-                    <h5>{{exp.start_date}} - present</h5>
-                {% else %}
-                    <h5>{{exp.start_date}} - {{exp.end_date}}</h5>
-                {% endif %}
-
-              <p><em>{{exp.company}}, {{exp.location}} </em></p>
-              <ul>
-                  {% if exp.responsibilities_1 is not None %}
-                    <li>{{exp.responsibilities_1}}</li>
-                  {% endif %}
-                  {% if exp.responsibilities_2 %}
-                    <li>{{exp.responsibilities_2}}</li>
-                  {% endif %}
-                  {% if exp.responsibilities_3 %}
-                    <li>{{exp.responsibilities_3}}</li>
-                  {% endif %}
-                  {% if exp.responsibilities_4 %}
-                    <li>{{exp.responsibilities_4}}</li>
-                  {% endif %}
-
-
-
-              </ul>
-            </div>
-            {% endfor %}
-
-          </div>
-
-</section>
-
 <hr>
 
 <div class="contact">
@@ -275,10 +216,6 @@ width:120px;
     {{ form|crispy }}
     <button type="submit" class="btn btn-success">Send Now</button>
   </form>
-
-<!--    <p> I love to connect with people and solve the problems and help the world</p>-->
-<!--    <div class="email-me">-->
-<!--        <a class="bt btn primary" href = "mailto:jebaseelanravi96@gmail.com">Send Email</a>-->
 </div>
 
 
