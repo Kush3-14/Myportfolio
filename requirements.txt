@@ -16,3 +16,5 @@ sqlparse==0.4.1
 waitress==1.4.4
 whitenoise==5.2.0
 wincertstore==0.2
+dj-database-url 
+psycopg2
